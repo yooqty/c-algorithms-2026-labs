@@ -1,6 +1,3 @@
-// filter2.c - версия для двухканального сглаживания
-// Использование: ./gen | ./filter2 [N] | ./osc
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -44,8 +41,8 @@ double smooth_value(const double *buffer, const SavitzkyGolayFilter *filter, int
 }
 
 int main(int argc, char **argv) {
-    double y1[BUFFER_SIZE];     // буфер для первого канала
-    double y2[BUFFER_SIZE];     // буфер для второго канала
+    double y1[BUFFER_SIZE];
+    double y2[BUFFER_SIZE];
     int buffer_pos = 0;
     int points = 5;
     int i;
